@@ -19,10 +19,8 @@ export const travelCompassTheme = createTheme({
       type: "clear",
     }),
     Text: {
-      h1Style: {
-        color: "",
-        fontWeight: "",
-        fontFamily: "",
+      h2Style: {
+        color: themePalette.primary,
       },
     },
   },

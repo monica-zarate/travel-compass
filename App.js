@@ -26,9 +26,19 @@ export default function App() {
       <ThemeProvider theme={travelCompassTheme}>
         <NavigationContainer>
           <Tab.Navigator
+            initialRouteName="Home"
             screenOptions={{
-              tabBarActiveTintColor: "#0081A7",
-              tabBarInactiveTintColor: "000000",
+              tabBarStyle: {
+                backgroundColor: '#0081A7',
+              },
+              tabBarActiveTintColor: "#ffffff",
+              tabBarInactiveTintColor: "#99ffffff",
+              headerStyle: {
+                backgroundColor: '#0081A7',
+              },
+              headerTintColor: '#ffffff',
+              headerTitleAlign: 'center',
+              tabBarShowLabel: false,
             }}
           >
             <Tab.Screen
@@ -42,11 +52,42 @@ export default function App() {
                     size={size}
                   />
                 ),
+                headerShown: false,
               }}
             />
-            <Tab.Screen name="Discover" component={DiscoverScreen} />
-            <Tab.Screen name="Notifications" component={NotificationsScreen} />
-            <Tab.Screen name="Account" component={AccountScreen} />
+            <Tab.Screen 
+            name="Discover" 
+            component={DiscoverScreen} 
+            options={{
+              tabBarIcon: ({ color, size}) => (
+                <MaterialCommunityIcons
+                name="compass"
+                color={color}
+                size={size}/>
+              )
+            }}/>
+            <Tab.Screen 
+            name="Notifications" 
+            component={NotificationsScreen} 
+            options={{
+              tabBarIcon: ({ color, size}) => (
+                <MaterialCommunityIcons
+                name="bell"
+                color={color}
+                size={size}/>
+              )
+            }}/>
+            <Tab.Screen 
+            name="Account" 
+            component={AccountScreen} 
+            options={{
+              tabBarIcon: ({ color, size}) => (
+                <MaterialCommunityIcons
+                name="account"
+                color={color}
+                size={size}/>
+              )
+            }}/>
           </Tab.Navigator>
         </NavigationContainer>
       </ThemeProvider>
