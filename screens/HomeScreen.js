@@ -1,4 +1,4 @@
-import { View, FlatList, StyleSheet } from "react-native";
+import { View, FlatList, StyleSheet, PixelRatio } from "react-native";
 import { Button, Text } from "@rneui/themed";
 
 import TripCard from "../components/TripCard";
@@ -18,15 +18,15 @@ export default function HomeScreen({ navigation }) {
   );
 
   return (
-    <View>
-      <View>
-        <Text style={styles.h2}>Hello John</Text>
+    <View style={styles.container}>
+      <View style={styles.greet}>
+        <Text h2>Hello John</Text>
         <Text>
-          Saturday, January 7th {"\n"} 7° – Cloudy {"\n"} Whistler, BC
+          Saturday, January 7th {"\n"}7° – Cloudy {"\n"}Whistler, BC
         </Text>
       </View>
       <View>
-        <Text style={styles.h2}>Current Trip</Text>
+        <Text h2>Current Trip</Text>
         <FlatList
           data={getCurrentTrip()}
           renderItem={renderCard}
@@ -34,7 +34,7 @@ export default function HomeScreen({ navigation }) {
         />
       </View>
       <View>
-        <Text style={styles.h2}>Upcoming Trips</Text>
+        <Text h2>Upcoming Trips</Text>
         <FlatList
           data={getUpcomingTrips()}
           renderItem={renderCard}
@@ -54,14 +54,13 @@ export default function HomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  h2: {
-    color: "#151515",
-    fontWeight: "700",
-    fontSize: 30,
-    lineHeight: 60,
+  container: {
+    paddingTop: 40,
+    paddingHorizontal: 32,
+    paddingBottom: 344,
+    backgroundColor: "#ffffff",
   },
-  body: {
-    color: "#3B3B3B",
-    fontSize: 20,
+  greet: {
+    marginBottom: 32,
   },
 });

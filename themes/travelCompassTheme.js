@@ -19,8 +19,16 @@ export const travelCompassTheme = createTheme({
       type: "clear",
     }),
     Text: {
+      style: {
+        color: "#3B3B3B",
+        fontSize: 20,
+        lineHeight: 28,
+      },
       h2Style: {
-        color: themePalette.primary,
+        color: themePalette.darker,
+        fontWeight: "700",
+        fontSize: 32,
+        lineHeight: 40,
       },
     },
   },
