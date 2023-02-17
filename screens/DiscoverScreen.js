@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
-import { Text, Input, Button, Icon } from "@rneui/themed";
+import { Text, Input, Icon } from "@rneui/themed";
 
-export default function DiscoverScreen({ navigation }) {
+export default function DiscoverScreen() {
   return (
     <View style={styles.container}>
       <Input

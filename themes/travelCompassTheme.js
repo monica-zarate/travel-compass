@@ -12,7 +12,7 @@ const themePalette = {
 
 export const travelCompassTheme = createTheme({
   components: {
-    Button: (buttonProps) => ({
+    Button: () => ({
       buttonStyle: {
         raised: true,
         borderRadius: 5,
@@ -23,7 +23,6 @@ export const travelCompassTheme = createTheme({
       titleStyle: {
         color: themePalette.white,
       },
-      disabledStyle: {},
     }),
     Text: {
       style: {

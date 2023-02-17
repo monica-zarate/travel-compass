@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import { Text, Input, Button, Icon } from "@rneui/themed";
+import { Input, Button, Icon } from "@rneui/themed";
 
 export default function NewTripScreen({ navigation }) {
   return (
