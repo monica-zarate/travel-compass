@@ -55,6 +55,9 @@ export const travelCompassTheme = createTheme({
       inputContainerStyle: {
         borderBottomWidth: 0,
       },
+      inputStyle: {
+        color: themePalette.dark,
+      },
     },
   },
 });
