@@ -18,6 +18,7 @@ export const travelCompassTheme = createTheme({
         borderRadius: 5,
         backgroundColor: themePalette.highlight,
         elevation: 3,
+        borderColor: themePalette.highlight,
       },
       titleStyle: {
         color: themePalette.white,

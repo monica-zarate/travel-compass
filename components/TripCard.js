@@ -3,7 +3,11 @@ import { Text, ListItem } from "@rneui/themed";
 
 export default function TripCard({ itemData, navigationRef }) {
   return (
-    <ListItem onPress={() => navigationRef.navigate("OngoingTrip")}>
+    <ListItem
+      onPress={() =>
+        navigationRef.navigate("TripDetailsScreen", { detailId: itemData.id })
+      }
+    >
       <ImageBackground
         source={itemData.image}
         style={styles.backgroundImage}
