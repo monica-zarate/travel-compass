@@ -1,13 +1,10 @@
 import * as React from "react";
-import { StyleSheet, View, ActivityIndicator } from "react-native";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-
-// fonts here
 
 import { ThemeProvider } from "@rneui/themed";
 import { travelCompassTheme } from "./themes/travelCompassTheme";
@@ -20,7 +17,6 @@ import AccountScreen from "./screens/AccountScreen";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  // useFonts() hook & conditional to show the Activity Indicator
   return (
     <SafeAreaProvider>
       <ThemeProvider theme={travelCompassTheme}>
@@ -29,15 +25,15 @@ export default function App() {
             initialRouteName="Home"
             screenOptions={{
               tabBarStyle: {
-                backgroundColor: '#0081A7',
+                backgroundColor: "#0081A7",
               },
               tabBarActiveTintColor: "#ffffff",
               tabBarInactiveTintColor: "#99ffffff",
               headerStyle: {
-                backgroundColor: '#0081A7',
+                backgroundColor: "#0081A7",
               },
-              headerTintColor: '#ffffff',
-              headerTitleAlign: 'center',
+              headerTintColor: "#ffffff",
+              headerTitleAlign: "center",
               tabBarShowLabel: false,
             }}
           >
@@ -55,39 +51,45 @@ export default function App() {
                 headerShown: false,
               }}
             />
-            <Tab.Screen 
-            name="Discover" 
-            component={DiscoverScreen} 
-            options={{
-              tabBarIcon: ({ color, size}) => (
-                <MaterialCommunityIcons
-                name="compass"
-                color={color}
-                size={size}/>
-              )
-            }}/>
-            <Tab.Screen 
-            name="Notifications" 
-            component={NotificationsScreen} 
-            options={{
-              tabBarIcon: ({ color, size}) => (
-                <MaterialCommunityIcons
-                name="bell"
-                color={color}
-                size={size}/>
-              )
-            }}/>
-            <Tab.Screen 
-            name="Account" 
-            component={AccountScreen} 
-            options={{
-              tabBarIcon: ({ color, size}) => (
-                <MaterialCommunityIcons
-                name="account"
-                color={color}
-                size={size}/>
-              )
-            }}/>
+            <Tab.Screen
+              name="Discover"
+              component={DiscoverScreen}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <MaterialCommunityIcons
+                    name="compass"
+                    color={color}
+                    size={size}
+                  />
+                ),
+              }}
+            />
+            <Tab.Screen
+              name="Notifications"
+              component={NotificationsScreen}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <MaterialCommunityIcons
+                    name="bell"
+                    color={color}
+                    size={size}
+                  />
+                ),
+              }}
+            />
+            <Tab.Screen
+              name="Account"
+              component={AccountScreen}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <MaterialCommunityIcons
+                    name="account"
+                    color={color}
+                    size={size}
+                  />
+                ),
+              }}
+            />
           </Tab.Navigator>
         </NavigationContainer>
       </ThemeProvider>
