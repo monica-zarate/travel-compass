@@ -1,15 +1,52 @@
-import { Text, ListItem, Button } from '@rneui/themed';
+import { StyleSheet, ImageBackground, View } from "react-native";
+import { Text, ListItem } from "@rneui/themed";
 
-export default function TripCard({ itemData, navigationRef}) {
+export default function TripCard({ itemData, navigationRef }) {
+  return (
+    <ListItem onPress={() => navigationRef.navigate("OngoingTrip")}>
+      <ImageBackground
+        source={itemData.image}
+        style={styles.backgroundImage}
+        resizeMode="cover"
+      >
+        <ListItem.Content style={styles.container}>
+          <View>
+            <Text style={styles.cardText}>{itemData.name}</Text>
+          </View>
+          <View style={styles.tripDetails}>
+            <Text style={styles.cardTextSmll}>{itemData.dates}</Text>
+            <Text style={styles.cardTextSmll}>{itemData.location}</Text>
+          </View>
+        </ListItem.Content>
+      </ImageBackground>
+    </ListItem>
+  );
+}
 
-    return(
-        <ListItem>
-            <ListItem.Content>
-                <Text>{itemData.name}</Text>
-                <Text>{itemData.dates}</Text>
-                <Text>{itemData.location}</Text>
-                {/* <Button onPress={() => navigationRef.navigate({detailId: itemData.id})}/> */}
-            </ListItem.Content>
-        </ListItem>
-    ); 
-};
+const styles = StyleSheet.create({
+  container: {
+    height: 180,
+    flex: 1,
+    justifyContent: "space-between",
+  },
+  tripDetails: {
+    width: 280,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  backgroundImage: {
+    flex: 1,
+    justifyContent: "center",
+    padding: 16,
+  },
+  cardText: {
+    color: "#ffffff",
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  cardTextSmll: {
+    color: "#ffffff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+});

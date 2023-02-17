@@ -7,20 +7,26 @@ const themePalette = {
   darker: "#151515",
   dark: "#3B3B3B",
   grey: "#EAEAEA",
+  white: "#ffffff",
 };
 
 export const travelCompassTheme = createTheme({
   components: {
     Button: (buttonProps) => ({
-      buttonStyle: {},
-      titleStyle: {},
+      buttonStyle: {
+        raised: true,
+        borderRadius: 5,
+        backgroundColor: themePalette.highlight,
+        elevation: 3,
+      },
+      titleStyle: {
+        color: themePalette.white,
+      },
       disabledStyle: {},
-      icon: {},
-      type: "clear",
     }),
     Text: {
       style: {
-        color: "#3B3B3B",
+        color: themePalette.dark,
         fontSize: 20,
         lineHeight: 28,
       },
@@ -29,6 +35,11 @@ export const travelCompassTheme = createTheme({
         fontWeight: "700",
         fontSize: 32,
         lineHeight: 40,
+      },
+    },
+    Icon: {
+      style: {
+        raised: true,
       },
     },
   },
