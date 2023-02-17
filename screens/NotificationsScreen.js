@@ -1,10 +1,19 @@
-import { View } from "react-native";
-import { Button, Text } from "@rneui/themed";
+import { View, StyleSheet } from "react-native";
+import { Text } from "@rneui/themed";
 
-export default function NotificationsScreen({ navigation }) {
+export default function NotificationsScreen() {
   return (
-    <View>
-      <Text>This is the Notifications Screen</Text>
+    <View style={styles.container}>
+      <Text>No new notifications</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 40,
+    paddingHorizontal: 32,
+    backgroundColor: "#ffffff",
+    minHeight: "100%",
+  },
+});

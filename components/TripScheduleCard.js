@@ -3,7 +3,7 @@ import { Text, ListItem, Image } from "@rneui/themed";
 
 export default function TripScheduleCard({ itemData }) {
   return (
-    <ListItem>
+    <ListItem containerStyle={{ padding: 0 }}>
       <ListItem.Content style={styles.container}>
         <View style={styles.card}>
           <Image source={itemData.icon} style={styles.icon} />
@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#EAEAEA",
     padding: 16,
-    borderRadius: 5,
   },
   card: {
     flexDirection: "row",

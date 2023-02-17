@@ -43,5 +43,18 @@ export const travelCompassTheme = createTheme({
         raised: true,
       },
     },
+    Input: {
+      containerStyle: {
+        paddingHorizontal: 16,
+        borderColor: themePalette.grey,
+        borderWidth: 1,
+        borderRadius: 5,
+        height: 48,
+        marginBottom: 24,
+      },
+      inputContainerStyle: {
+        borderBottomWidth: 0,
+      },
+    },
   },
 });

@@ -7,6 +7,7 @@ export default function TripCard({ itemData, navigationRef }) {
       onPress={() =>
         navigationRef.navigate("TripDetailsScreen", { detailId: itemData.id })
       }
+      containerStyle={{ padding: 0 }}
     >
       <ImageBackground
         source={itemData.image}
@@ -34,14 +35,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   tripDetails: {
-    width: 280,
+    width: 310,
     flexDirection: "row",
     justifyContent: "space-between",
   },
   backgroundImage: {
     flex: 1,
     justifyContent: "center",
-    padding: 16,
+    padding: 24,
+    borderRadius: 5,
   },
   cardText: {
     color: "#ffffff",

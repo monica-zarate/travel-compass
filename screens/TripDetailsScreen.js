@@ -107,9 +107,10 @@ const styles = StyleSheet.create({
   schedTitle: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 24,
+    marginVertical: 24,
   },
   btn: {
+    marginTop: 48,
     marginBottom: 172,
   },
 });
