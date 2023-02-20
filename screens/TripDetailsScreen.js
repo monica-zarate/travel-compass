@@ -5,9 +5,13 @@ import TripScheduleCard from "../components/TripScheduleCard";
 
 import { getTripById, getTripSchedule } from "../data/trips-data";
 
+// Following a similar approach I took on the Home Screen, the Trip Details Screen is one FlatList that includes a List Header and List Footer Components, to make this screen contents scrollable.
 export default function TripDetailsScreen({ route, navigation }) {
+  // I'm retrieving the id of the current trip, to have access to some its details to print them out on the Header of the Flat List.
   const { detailId } = route.params;
   const currTrip = getTripById(detailId);
+
+  // Render item will pass an item object and the navigation information to the Trip Schedule Card component, to print out a card per item.
   const renderItem = ({ item }) => (
     <TripScheduleCard itemData={item} navigationRef={navigation} />
   );

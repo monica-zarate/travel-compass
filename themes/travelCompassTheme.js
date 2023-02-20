@@ -1,5 +1,6 @@
 import { createTheme } from "@rneui/themed";
 
+// I'm making use of a colour palette to style some components that are used across the application, like Button, Text & Inputs.
 const themePalette = {
   primary: "#0081A7",
   secondary: "#00AFB9",

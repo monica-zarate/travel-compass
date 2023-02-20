@@ -1,6 +1,8 @@
 import { View, StyleSheet } from "react-native";
 import { Text, ListItem, Image } from "@rneui/themed";
 
+// The Trip Schedule Card Component is making use of the received data, to print out the information needed for each card.
+// Since some of the keys on the trip schedule objects are empty for some cases, I'm making use of a logical operator to include the Text tags only if that key has a value, to prevent from having blank spaces.
 export default function TripScheduleCard({ itemData }) {
   return (
     <ListItem containerStyle={{ padding: 0 }}>

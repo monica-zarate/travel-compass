@@ -1,6 +1,7 @@
 import { StyleSheet, ImageBackground, View } from "react-native";
 import { Text, ListItem } from "@rneui/themed";
 
+// Each of the List Items has an onPress event attached to the, which is making use of the received itemData and navigationRef props to know which item was pressed to passed down to the Trip Details Screen.
 export default function TripCard({ itemData, navigationRef }) {
   return (
     <ListItem

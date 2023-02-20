@@ -1,9 +1,12 @@
+// Application's Stacked Navigation
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+// Project imports: Three Parent-child transition screens
 import HomeScreen from "./HomeScreen";
 import TripDetails from "./TripDetailsScreen";
 import NewTripScreen from "./NewTripScreen";
 
+// Stack Navigator will be applied using the Stack constant around all screens.
 const Stack = createNativeStackNavigator();
 
 export default function TravelNav() {

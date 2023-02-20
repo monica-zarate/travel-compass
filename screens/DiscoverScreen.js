@@ -1,6 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import { Text, Input, Icon } from "@rneui/themed";
 
+// Similar to the New Trip Screen, the Discover Screen just offers a visualization of how this section would look like when the user is interested in finding a specific travel destination. The Input does not have any searching capabilities.
 export default function DiscoverScreen() {
   return (
     <View style={styles.container}>

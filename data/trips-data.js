@@ -1,3 +1,4 @@
+// Get trips and Get trip Schedule will return all the data in their respective arrays. Get trip by id, requires a trip's id to find the appropriate information.
 export function getTrips() {
   return TRIPSDATA;
 }
@@ -37,6 +38,7 @@ export const TRIPSDATA = [
   },
 ];
 
+// I struggled with the structuring of the schedule data. It was mocked-up as having a schedule for different days as the trip progresses, but that would've forced me to use several nested FlatLists, so for the sake of simplicity I decided to simplify the day information.
 export const SCHEDULEDATA = [
   {
     id: "001",
